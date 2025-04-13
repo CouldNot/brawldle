@@ -711,6 +711,14 @@ export const data = {
     reload: "Normal",
     released: "2025",
   },
+  lumi: {
+    rarity: "Mythic",
+    class: "Damage Dealer",
+    movement: "Normal",
+    range: "Long",
+    reload: "Normal",
+    released: "2025",
+  },
 };
 
 export const brawlers = Object.keys(data);
