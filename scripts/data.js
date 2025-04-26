@@ -719,6 +719,14 @@ export const data = {
     reload: "Normal",
     released: "2025",
   },
+  "jae-yong": {
+    rarity: "Mythic",
+    class: "Support",
+    movement: "Fast",
+    range: "Long",
+    reload: "Fast",
+    released: "2025",
+  },
 };
 
 export const brawlers = Object.keys(data);
