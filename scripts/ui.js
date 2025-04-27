@@ -282,7 +282,7 @@ async function onWin() {
 
 async function writeToFirebase(num_tries) {
   const today = new Date();
-  const dateKey = today.toISOString().split("T")[0]; // Gets the current date in YYYY-MM-DD format
+  const dateKey = toLocaleDateString("en-CA"); // Gets the current date in YYYY-MM-DD format
 
   const docRef = doc(db, "main", dateKey); // Reference to the "main" collection with the date as the document ID
 
