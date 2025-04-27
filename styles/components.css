@@ -1,452 +1,461 @@
 #content img {
-    max-width: 30%;
-    margin: 0 auto;
+  max-width: 30%;
+  margin: 0 auto;
 }
 
 #info {
-    margin: 0 auto;
-    text-align: center;
-    width: 80%;
-    height: 100%;
-    background-color: #766c92;
-    outline: 0.2rem solid rgb(60, 60, 60);
-    border-radius: 0.25em;
-    color: white;
-    font-size: 0.9em;
-    font-family: 'Lilita One', 'sans-serif';
-    font-weight: normal;
-    line-height: 90%;
-    font-size: 0.8em;
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  height: 100%;
+  background-color: #766c92;
+  outline: 0.2rem solid rgb(60, 60, 60);
+  border-radius: 0.25em;
+  color: white;
+  font-size: 0.9em;
+  font-family: "Lilita One", "sans-serif";
+  font-weight: normal;
+  line-height: 90%;
+  font-size: 0.8em;
 }
 
 .infotext {
-    font-family: 'Lilita One', 'sans-serif';
-    font-weight: normal;
-    line-height: 90%;
-    
+  font-family: "Lilita One", "sans-serif";
+  font-weight: normal;
+  line-height: 90%;
 }
 
 #guess {
-    display: flex;
-    margin: 0 auto;
-    width: 70%;
-    height: 3rem;
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+  height: 3rem;
 }
 
 #field {
-    user-select: none;
-    -webkit-user-select: none;
-    font-family: 'Lilita One', 'sans-serif';
-    flex-grow: 1;
-    text-align: center;
-    font-size: 1.2em;
-    border-radius: 0.25em;
-    border: 0.15em solid rgba(0, 0, 0, 0.8);
-    box-shadow: 0em 0.1em 0.1em rgba(0, 0, 0, 0.5);
-    outline-width: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  font-family: "Lilita One", "sans-serif";
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.2em;
+  border-radius: 0.25em;
+  border: 0.15em solid rgba(0, 0, 0, 0.8);
+  box-shadow: 0em 0.1em 0.1em rgba(0, 0, 0, 0.5);
+  outline-width: 0;
 }
 
 .submit {
-    font-family: 'Lilita One', 'sans-serif';
-    height: 100%;
-    width: 5em;
-    text-align: center;
-    border: 0.1em solid rgba(0, 0, 0, 0.8);
-    box-shadow: 0em 0.2em 0.1em rgba(0, 0, 0, 0.5);
-    border-radius: 0.25em;
-    background-color: #2271ff;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
+  font-family: "Lilita One", "sans-serif";
+  height: 100%;
+  width: 5em;
+  text-align: center;
+  border: 0.1em solid rgba(0, 0, 0, 0.8);
+  box-shadow: 0em 0.2em 0.1em rgba(0, 0, 0, 0.5);
+  border-radius: 0.25em;
+  background-color: #2271ff;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
 }
 
 #suggestion-list {
-    display: none;
-    font-family: 'Lilita One', 'sans-serif';
-    font-size: 1.2em;
-    max-height: 45vh;
-    overflow-y: auto;
-    width: calc(100% - 2rem);
-    position: absolute;
-    z-index: 10;
-    border-radius: 0.25em;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 0;
-    position: absolute;
-    margin: 0;  
-    padding: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 0.25em;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  font-family: "Lilita One", "sans-serif";
+  font-size: 1.2em;
+  max-height: 45vh;
+  overflow-y: auto;
+  width: calc(100% - 2rem);
+  position: absolute;
+  z-index: 10;
+  border-radius: 0.25em;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #wins-already-container {
-    font-family: 'Lilita One', 'sans-serif';
-    font-size: 1.1em;
+  font-family: "Lilita One", "sans-serif";
+  font-size: 1.1em;
 }
 
 #wins-already {
-    color: yellow;
+  color: yellow;
 }
 
 #list {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-    margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 1em;
 }
 
 .row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-
 .square {
-    min-width: 3em;
-    aspect-ratio: 1/1;
-    flex: 0 1 100%;
-    border-radius: 0.3em;
-    border: 0.15em solid black;
-    box-shadow: 0em 0.1em 0.1em black;
-    font-family: 'Lilita One', 'sans-serif';
+  min-width: 3em;
+  aspect-ratio: 1/1;
+  flex: 0 1 100%;
+  border-radius: 0.3em;
+  border: 0.15em solid black;
+  box-shadow: 0em 0.1em 0.1em black;
+  font-family: "Lilita One", "sans-serif";
 }
 
 #label-row {
-    display: flex;
-    flex-direction: row;
-    font-family: 'Lilita One', 'sans-serif';
-    gap: 1rem;
-    font-size: 1.2em;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 2em;
-    opacity: 0;
-    font-size: 1em;
+  display: flex;
+  flex-direction: row;
+  font-family: "Lilita One", "sans-serif";
+  gap: 1rem;
+  font-size: 1.2em;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 2em;
+  opacity: 0;
+  font-size: 1em;
 }
 
 .label {
-    flex: 0 1 100%;
-    text-align: center;
-    font-family: 'Lilita One', 'sans-serif';
+  flex: 0 1 100%;
+  text-align: center;
+  font-family: "Lilita One", "sans-serif";
 }
 
 .seperator {
-    background-color: white;
-    height: 0.2em;
-    width: 90%;
-    margin: 0.5em auto;
-    transform: skew(-30deg);
-    outline: 0.07em solid black;
-    box-shadow: 0 0.15em 0 black;
+  background-color: white;
+  height: 0.2em;
+  width: 90%;
+  margin: 0.5em auto;
+  transform: skew(-30deg);
+  outline: 0.07em solid black;
+  box-shadow: 0 0.15em 0 black;
 }
 
 .portrait {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .up {
-    background-color: #d40c00;
-    background-image: url('../assets/up.png');
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    align-content: center;
+  background-color: #d40c00;
+  background-image: url("../assets/up.png");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  align-content: center;
 }
 
 .down {
-    background-color: #d40c00;
-    background-image: url('../assets/down.png');
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    align-content: center;
+  background-color: #d40c00;
+  background-image: url("../assets/down.png");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  align-content: center;
 }
 
 #success {
-    background-color: red;
-    width: 40%;
-    height: 50rem;
-    outline: 0.2rem solid rgb(60, 60, 60);
-    border-radius: 0.25em;
+  background-color: red;
+  width: 40%;
+  height: 50rem;
+  outline: 0.2rem solid rgb(60, 60, 60);
+  border-radius: 0.25em;
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    width: 50%;
-    font-family: 'Lilita One', 'sans-serif';
-    opacity: 0.5;
-    font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 50%;
+  font-family: "Lilita One", "sans-serif";
+  opacity: 0.5;
+  font-size: 1em;
 }
 
 #bottom-buttons {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 
 #github {
-    height: 2rem;
-    width: 2rem;
-    background: url('../assets/menuicons/github.png');
-    background-size: cover;
-    border: none;
-    cursor:pointer;
+  height: 2rem;
+  width: 2rem;
+  background: url("../assets/menuicons/github.png");
+  background-size: cover;
+  border: none;
+  cursor: pointer;
 }
 
 #info-button {
-    height: 2rem;
-    width: 2rem;
-    background: url('../assets/menuicons/information-button.png');
-    background-size: cover;
-    border: none;
-    cursor:pointer;
+  height: 2rem;
+  width: 2rem;
+  background: url("../assets/menuicons/information-button.png");
+  background-size: cover;
+  border: none;
+  cursor: pointer;
 }
 
-
 #yesterday-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Lilita One', 'sans-serif';
-    font-weight: normal;
-    width: 60%;
-    gap: 1em;
-    margin: 5em auto;
-    font-size: 1em;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lilita One", "sans-serif";
+  font-weight: normal;
+  width: 60%;
+  gap: 1em;
+  margin: 5em auto;
+  font-size: 1em;
+  text-align: center;
 }
 
 #yesterday-number {
-    color: #00a5f9;
+  color: #00a5f9;
 }
 
 #yesterday-icon {
-    width: 3em;
+  width: 3em;
 }
 
 #yesterday-brawler {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .bottom-info {
-    color: white;
-    -webkit-text-stroke: 0.02rem black;
-    text-shadow: 0 0.09em 0 black;
-    margin: 0;
+  color: white;
+  -webkit-text-stroke: 0.02rem black;
+  text-shadow: 0 0.09em 0 black;
+  margin: 0;
 }
 
 #menu {
-    margin: 0 auto 2em;
-    height: 2em;
-    display: flex;
-    width: 60%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    opacity: 0.5;
+  margin: 0 auto 2em;
+  height: 2em;
+  display: flex;
+  width: 60%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  opacity: 0.5;
 }
 
 #stats {
-    background: url('../assets/menuicons/graph.png');
-    aspect-ratio: 1/1;
-    flex: 0 1 2.3em;
-    border: none;
-    background-size: cover;
-    cursor: pointer;
+  background: url("../assets/menuicons/graph.png");
+  aspect-ratio: 1/1;
+  flex: 0 1 2.3em;
+  border: none;
+  background-size: cover;
+  cursor: pointer;
 }
 
 #question {
-    background: url('../assets/menuicons/question-mark.png');
-    aspect-ratio: 1/1;
-    flex: 0 1 2em;
-    border: none;
-    background-size: cover;
-    cursor: pointer;
+  background: url("../assets/menuicons/question-mark.png");
+  aspect-ratio: 1/1;
+  flex: 0 1 2em;
+  border: none;
+  background-size: cover;
+  cursor: pointer;
 }
 
-
 #settings {
-    background: url('../assets/menuicons/settings.png');
-    aspect-ratio: 1/1;
-    flex: 0 1 2em;
-    border: none;
-    background-size: cover;
-    cursor: pointer;
+  background: url("../assets/menuicons/settings.png");
+  aspect-ratio: 1/1;
+  flex: 0 1 2em;
+  border: none;
+  background-size: cover;
+  cursor: pointer;
 }
 
 #streak {
-    font-family: 'Lilita One', 'sans-serif';
-    aspect-ratio: 1/1;
-    height: 90%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    background-image: url('../assets/menuicons/streak.png');
-    color: white;
-    background-position: center;
-    background-size: cover;
+  font-family: "Lilita One", "sans-serif";
+  aspect-ratio: 1/1;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-image: url("../assets/menuicons/streak.png");
+  color: white;
+  background-position: center;
+  background-size: cover;
 }
 
 #streak span {
-    padding-top: 0.3em;
+  padding-top: 0.3em;
 }
 
 #win-info {
-    opacity: 0;
-    margin: 0 auto;
-    width: 45%;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    border: 3px solid #2e2e2e;
-    border-radius: 0.5em;
-    box-shadow: 0em 0.15em 0.1em #2e2e2e;
-    background: linear-gradient(180deg, rgba(50,193,44,0.3) 0%, rgba(38,44,60,0.45) 50%);
-    justify-content: center;
-    text-align: center;
-    font-family: 'Lilita One', 'sans-serif';
-    -webkit-text-stroke: 0.01rem black;
+  opacity: 0;
+  margin: 0 auto;
+  width: 45%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #2e2e2e;
+  border-radius: 0.5em;
+  box-shadow: 0em 0.15em 0.1em #2e2e2e;
+  background: linear-gradient(
+    180deg,
+    rgba(50, 193, 44, 0.3) 0%,
+    rgba(38, 44, 60, 0.45) 50%
+  );
+  justify-content: center;
+  text-align: center;
+  font-family: "Lilita One", "sans-serif";
+  -webkit-text-stroke: 0.01rem black;
 }
 
 .victory {
-    font-size: 2em;
-    font-style: italic;
-    padding: 0;
-    margin-top: 0.8em;
-    margin-bottom: 0.8em;
-    transform: rotate(-2deg);
-    -webkit-text-stroke: 0.01rem black;
+  font-size: 2em;
+  font-style: italic;
+  padding: 0;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  transform: rotate(-2deg);
+  -webkit-text-stroke: 0.01rem black;
 }
 
 .win-num-of-tries-text {
-    color: white;
-    font-size: 1.1em;
-    -webkit-text-stroke: 0.02rem black;
-    margin-top: 1.5em;
-    margin-bottom: 0;
+  color: white;
+  font-size: 1.1em;
+  -webkit-text-stroke: 0.02rem black;
+  margin-bottom: 0;
+}
+
+.win-stats-box {
+  display: flex;
+  margin-top: 1.5em;
+  flex-direction: column;
 }
 
 #win-num-of-tries {
-    color: #4286ff;
+  color: #4286ff;
+}
+
+#avg-num-of-tries {
+  color: #4286ff;
 }
 
 #win-header {
-    font-family: 'Lilita One', 'sans-serif';
-    align-items: flex-start;
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-    width: 100%;
-    height: 5em;
-    justify-content: center;
+  font-family: "Lilita One", "sans-serif";
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  width: 100%;
+  height: 5em;
+  justify-content: center;
 }
 
 #win-brawler-name-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    text-align: start;
-    justify-content: center;
-    -webkit-text-stroke: 0.01rem black;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: start;
+  justify-content: center;
+  -webkit-text-stroke: 0.01rem black;
 }
 
 #win-brawler-name-container h2 {
-    margin: 0;
-    padding-bottom: -2em;
+  margin: 0;
+  padding-bottom: -2em;
 }
 
 #win-portrait {
-    aspect-ratio: 1/1;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 0.25em;
-    border: 0.2em solid rgb(38,44,60);
+  aspect-ratio: 1/1;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.25em;
+  border: 0.2em solid rgb(38, 44, 60);
 }
 
 .win-next-brawler-in {
-    font-size: 1.2em;
-    margin: 0;
-    color: white;
-    -webkit-text-stroke: 0.02rem black;
+  font-size: 1.2em;
+  margin: 0;
+  color: white;
+  -webkit-text-stroke: 0.02rem black;
 }
 
 #win-time-until-next {
-    color: white;
-    font-size: 2em;
-    margin-top: 0.5em;
-    -webkit-text-stroke: 0.03rem black;
+  color: white;
+  font-size: 2em;
+  margin-top: 0.5em;
+  -webkit-text-stroke: 0.03rem black;
 }
 
 #win-action-buttons {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    margin: 1.5em auto;
-    gap: 1em;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 1.5em auto;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
 }
 
 .win-action-button {
-    background-color:#2e2e2e;
-    gap: 0.5em;
-    border: 0.1em solid #dbdbdb;
-    color: #dbdbdb;
-    border-radius: 0.25em;
-    text-align: center;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5em;
-    height: 1em;
-    width: 4em;
+  background-color: #2e2e2e;
+  gap: 0.5em;
+  border: 0.1em solid #dbdbdb;
+  color: #dbdbdb;
+  border-radius: 0.25em;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  height: 1em;
+  width: 4em;
 }
 
 #win-stats-button-icon {
-    aspect-ratio: 1/1;
-    background: url('../assets/menuicons/graph.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: brightness(0) invert(0.8);
-    width: 1em;
+  aspect-ratio: 1/1;
+  background: url("../assets/menuicons/graph.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0) invert(0.8);
+  width: 1em;
 }
 
 #win-share-button-icon {
-    aspect-ratio: 1/1;
-    background: url('../assets/menuicons/share.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: brightness(0) invert(0.8);
-    width: 1em;
+  aspect-ratio: 1/1;
+  background: url("../assets/menuicons/share.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0) invert(0.8);
+  width: 1em;
 }

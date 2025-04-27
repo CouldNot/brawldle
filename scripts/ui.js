@@ -210,26 +210,30 @@ export function displayGuess(brawler, brawlerName) {
   }
 
   const lastSquare = row.lastElementChild;
-  lastSquare.addEventListener("animationend", () => {
+  lastSquare.addEventListener("animationend", async () => {
     // Re-enable input and form once animation ends
     inputField.classList.remove("disabled");
     guessForm.classList.remove("disabled");
 
     // Trigger win condition if all categories are correct
     if (correct_categories.every(Boolean)) {
-      onWin();
+      await onWin();
     }
   });
 }
 
-export function displayWin() {
+export async function displayWin() {
   const win_portrait = document.getElementById("win-portrait");
   const win_brawler_name = document.getElementById("win-brawler-name");
   const win_num_of_tries = document.getElementById("win-num-of-tries");
+  const avg_num_of_tries = document.getElementById("avg-num-of-tries");
 
   win_portrait.style.backgroundImage = `url("assets/portraits/${answer}_portrait.png")`;
   win_brawler_name.textContent = answer.toUpperCase();
   win_num_of_tries.textContent = String(getStoredGuesses().length);
+  avg_num_of_tries.textContent = parseFloat(
+    String(await getAvgTries())
+  ).toFixed(1);
 
   let share_button = document.getElementById("win-share-button");
   share_button.onclick = onShareButtonClicked;
@@ -237,7 +241,7 @@ export function displayWin() {
   countdown();
 }
 
-function onWin() {
+async function onWin() {
   // update data
   const today = currentDate;
   const formattedDate = `${
@@ -252,11 +256,11 @@ function onWin() {
   guessForm.classList.add("disabled");
 
   const win_info = document.getElementById("win-info");
-  displayWin();
+  await displayWin();
 
   if (!getAlreadyWon()) {
     // Call this function when the user wins
-    writeToFirebase()
+    writeToFirebase(String(getStoredGuesses().length))
       .then(() => {
         console.log("Firebase updated with win count!");
       })
@@ -276,7 +280,7 @@ function onWin() {
   }
 }
 
-async function writeToFirebase() {
+async function writeToFirebase(num_tries) {
   const today = new Date();
   const dateKey = today.toISOString().split("T")[0]; // Gets the current date in YYYY-MM-DD format
 
@@ -291,6 +295,7 @@ async function writeToFirebase() {
       docRef,
       {
         won: increment(1),
+        totalTries: increment(num_tries),
       },
       { merge: true }
     ); // Merge to only update "won" field
@@ -298,12 +303,13 @@ async function writeToFirebase() {
     // If document doesn't exist, create it with won field set to 1
     await setDoc(docRef, {
       won: 1,
+      totalTries: num_tries,
     });
   }
 }
 
 export async function getWins() {
-  const wins_already = document.getElementById("wins-already");
+  //   const wins_already = document.getElementById("wins-already");
   const container = document.getElementById("wins-already-text");
   const today = new Date();
 
@@ -322,6 +328,21 @@ export async function getWins() {
   } else {
     updateWinsAlreadyCounter(0);
     container.textContent = " people already found out!";
+  }
+}
+
+export async function getAvgTries() {
+  const today = new Date();
+  const dateKey = today.toLocaleDateString("en-CA");
+  const docRef = doc(db, "main", dateKey);
+  const docSnap = await getDoc(docRef);
+  if (docSnap.exists()) {
+    const totalTries = docSnap.data().totalTries;
+    const wins = docSnap.data().won;
+
+    return Number(totalTries) / Number(wins);
+  } else {
+    return 0;
   }
 }
 
