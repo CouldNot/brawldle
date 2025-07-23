@@ -111,6 +111,7 @@ export function displayGuess(brawler, brawlerName) {
     "epic",
     "mythic",
     "legendary",
+    "ultra legendary",
   ];
   const movementLevels = ["very slow", "slow", "normal", "fast", "very fast"];
   const rangeLevels = ["very short", "short", "normal", "long", "very long"];

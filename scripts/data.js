@@ -727,6 +727,30 @@ export const data = {
     reload: "Fast",
     released: "2025",
   },
+  kaze: {
+    rarity: "Ultra Legendary",
+    class: "Assassin",
+    movement: "Normal",
+    range: "Normal",
+    reload: "Normal",
+    released: "2025",
+  },
+  alli: {
+    rarity: "Mythic",
+    class: "Assassin",
+    movement: "Fast",
+    range: "Short",
+    reload: "Normal",
+    released: "2025",
+  },
+  trunk: {
+    rarity: "Epic",
+    class: "Tank",
+    movement: "Fast",
+    range: "Short",
+    reload: "Normal",
+    released: "2025",
+  },
 };
 
 export const brawlers = Object.keys(data);
