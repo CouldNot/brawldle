@@ -19,6 +19,22 @@
   font-size: 0.8em;
 }
 
+#TEMPORARY {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  height: 100%;
+  background-color: #895e33 ;
+  outline: 0.2rem solid rgb(60, 60, 60);
+  border-radius: 0.25em;
+  color: white;
+  font-size: 0.9em;
+  font-family: "Lilita One", "sans-serif";
+  font-weight: normal;
+  line-height: 90%;
+  font-size: 0.8em;
+}
+
 .infotext {
   font-family: "Lilita One", "sans-serif";
   font-weight: normal;
@@ -263,7 +279,6 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 1em;
-  opacity: 0.5;
 }
 
 #stats {
@@ -273,6 +288,7 @@ footer {
   border: none;
   background-size: cover;
   cursor: pointer;
+  opacity: 0.5;
 }
 
 #question {
@@ -282,6 +298,7 @@ footer {
   border: none;
   background-size: cover;
   cursor: pointer;
+  opacity: 0.5;
 }
 
 #settings {
@@ -291,7 +308,17 @@ footer {
   border: none;
   background-size: cover;
   cursor: pointer;
+  opacity: 0.5;
 }
+
+#language {
+  height: 2em;
+  aspect-ratio: 3/2;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
 
 #streak {
   font-family: "Lilita One", "sans-serif";
@@ -305,11 +332,20 @@ footer {
   color: white;
   background-position: center;
   background-size: cover;
+  opacity: 0.5;
 }
 
 #streak span {
   padding-top: 0.3em;
 }
+
+#languageSelect {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  height: auto;
+  border-radius: 6px;
+}
+
 
 #win-info {
   opacity: 0;

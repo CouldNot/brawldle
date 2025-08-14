@@ -3,6 +3,7 @@ import { handleFormSubmit } from "./game_logic.js";
 import {
   getClickToValidate,
   getHardMode,
+  getLanguage,
   getStoredGuesses,
   lowercaseToBrawlerName,
   setClickToValidate,
@@ -183,6 +184,8 @@ export function updateSettings() {
   hard_mode_toggle.dispatchEvent(new Event("change"));
 
   getClickToValidate();
+  getLanguage();
+  
   click_toggle.checked = getClickToValidate();
   click_toggle.dispatchEvent(new Event("change"));
 

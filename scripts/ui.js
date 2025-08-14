@@ -55,6 +55,39 @@ const categories = [
   "released",
 ];
 
+let TRANSLATIONS = {};
+let LANG_READY = false;
+
+export function t(key) {
+  // returns the translated string if loaded, otherwise the key itself
+  return (LANG_READY && TRANSLATIONS[key]) || key;
+}
+
+// apply i18n to a subtree (default whole document)
+function applyI18n(root = document) {
+  root.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    el.textContent = t(key);
+  });
+  root.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    el.setAttribute('placeholder', t(key));
+  });
+}
+
+export async function loadLanguage(langCode) {
+  try {
+    const res = await fetch(`languages/${langCode}.json`);
+    TRANSLATIONS = await res.json();
+    LANG_READY = true;
+    document.documentElement.setAttribute('lang', langCode);
+    applyI18n(document); // translate everything currently in the DOM
+  } catch (e) {
+    console.error('Error loading language:', e);
+  }
+}
+
+
 if (alreadyWon) {
   // don't let user guess again if they have already won
   inputField.classList.add("disabled");
@@ -126,7 +159,13 @@ export function displayGuess(brawler, brawlerName) {
       square.classList.add("portrait");
       square.style.backgroundImage = `url("assets/portraits/${brawlerName.toLowerCase()}_portrait.png")`;
     } else {
-      square.innerHTML = brawler[category];
+      if (category !== "released") {
+        const key = brawler[category];
+        square.setAttribute("data-i18n", key);
+        square.textContent = t(key); // <-- translate immediately so it's not blank
+      } else {
+        square.textContent = String(brawler[category]);
+      }
       square.classList.add("flip");
       square.style.animationDelay = `${flipDelay * index}ms`;
 
@@ -324,11 +363,8 @@ export async function getWins() {
   if (docSnap.exists()) {
     const wins = docSnap.data().won;
     updateWinsAlreadyCounter(wins);
-    if (wins == 1) container.innerHTML = " person already found out!";
-    else container.textContent = " people already found out!";
   } else {
     updateWinsAlreadyCounter(0);
-    container.textContent = " people already found out!";
   }
 }
 
@@ -354,25 +390,31 @@ export function startUpdatingWins() {
   }, 5000); // 5000ms (5 seconds)
 }
 
+let shareResetTimer; // avoid stacking timers on rapid clicks
+
 function onShareButtonClicked() {
   const text = guessesToEmojis(getStoredGuesses(), answer);
+  navigator.clipboard?.writeText(text).catch(() => {});
 
-  // // Copy the text to the clipboard
-  navigator.clipboard.writeText(text);
+  const label = document.getElementById("win-share-button-text");
+  const icon  = document.getElementById("win-share-button-icon");
 
-  // Change text to "copied"
-  let share_button_text = document.getElementById("win-share-button-text");
-  let share_button_icon = document.getElementById("win-share-button-icon");
+  // Cache the current (localized) label
+  const originalText = label.textContent;   // e.g., "Share" / "Compartilhar"
+  const i18nKey = label.getAttribute('data-i18n'); // keep this intact
 
-  share_button_icon.style.display = "none";
-  share_button_text.innerHTML = "Copied!";
+  // Show checkmark
+  icon.style.display = "none";
+  label.textContent = "✅";
 
-  // After 2 seconds
-  setTimeout(function () {
-    share_button_icon.style.display = "block";
-    share_button_text.innerHTML = "Share";
+  // Restore after 1.5s
+  clearTimeout(shareResetTimer);
+  shareResetTimer = setTimeout(() => {
+    icon.style.display = "block";
+    label.textContent = i18nKey ? t(i18nKey) : originalText;
   }, 1500);
 }
+
 
 function guessesToEmojis(guesses, answer) {
   let emojis = "";

@@ -25,6 +25,36 @@ export function getClickToValidate() {
     }
 }
 
+export function getLanguage() {
+    let language = localStorage.getItem('language');
+
+    if (!language) {
+        // detect browser language (like "en-US") → take first 2 letters
+        const browserLang = (navigator.language || navigator.userLanguage || 'en')
+            .split('-')[0]
+            .toLowerCase();
+
+        // supported languages list
+        const supported = ['en', 'pt'];
+        if (!supported.includes(browserLang)) {
+            language = 'en';
+        } else {
+            language = browserLang;
+        }
+
+        setLanguage(language);
+    }
+
+    console.log(navigator.language)
+    console.log(language)
+    return language;
+}
+
+export function setLanguage(lang) {
+    localStorage.setItem('language', lang);
+}
+
+
 export function setClickToValidate(mode) {
     localStorage.setItem('clicktovalidate', mode);
 }
