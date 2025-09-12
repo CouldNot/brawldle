@@ -1,186 +1,185 @@
 .hidden {
-    visibility: hidden;
-    height: 0;
-    width: 0;
+  visibility: hidden;
+  height: 0;
+  width: 0;
 }
 
 .stroke {
-    color: white;
-    text-shadow: 0 0.13em 0 black;
-    -webkit-text-stroke: 0.04rem black;
+  color: white;
+  text-shadow: 0 0.13em 0 black;
+  -webkit-text-stroke: 0.03em black;
 }
 
 .text-outline {
-    color: white;
-    text-shadow: 0 0.13em 0 black;
+  color: white;
+  text-shadow: 0 0.13em 0 black;
 }
 
 .red {
-    background-color: #d40c00;
-    text-align: center;
-    align-content: center;
+  background-color: #d40c00;
+  text-align: center;
+  align-content: center;
 }
 
 .green {
-    background-color: #32c21c;
-    text-align: center;
-    align-content: center;
+  background-color: #32c21c;
+  text-align: center;
+  align-content: center;
 }
 
 .black_overlay {
-    opacity: 0;
-    display: none;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: 1001;
-    -moz-opacity: 0.8;
-    opacity: .80;
-    filter: alpha(opacity=80);
+  opacity: 0;
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
 }
 
 .white_content {
-    opacity: 0;
-    display: none;
-    position: fixed;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    height: 50%;
-    padding: 2rem;
-    outline: 0.25rem solid rgb(60, 60, 60);
-    font-family: 'Lilita One', 'sans-serif';
-    background-color: #605b6b;
-    border-radius: 0.25em;
-    z-index: 1002;
-    overflow: auto;
-    -webkit-text-stroke: 0.02rem black;
+  opacity: 0;
+  display: none;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 2rem;
+  outline: 0.25rem solid rgb(60, 60, 60);
+  font-family: "Lilita One", "sans-serif";
+  background-color: #605b6b;
+  border-radius: 0.25em;
+  z-index: 1002;
+  overflow: auto;
+  /* -webkit-text-stroke: 0.02rem black; */
 }
 
 .white_content a {
-    color: white;
-    -webkit-text-stroke: 0.02rem black;
+  color: white;
+  /* -webkit-text-stroke: 0.02rem black; */
 }
 
 .white_content button {
-    font-family: 'Lilita One', 'sans-serif';
-    background-color:#2e2e2e;
-    gap: 0.5em;
-    font-size: 1em;
-    border: 0.1em solid #dbdbdb;
-    color: #dbdbdb;
-    border-radius: 0.25em;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    height: 2em;
-    width: 6em;
-    margin-top: 1em;
-    display: flex;
-    flex-direction: row;
+  font-family: "Lilita One", "sans-serif";
+  background-color: #2e2e2e;
+  gap: 0.5em;
+  font-size: 1em;
+  border: 0.1em solid #dbdbdb;
+  color: #dbdbdb;
+  border-radius: 0.25em;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  width: 6em;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
 }
 
 .close-icon {
-    aspect-ratio: 1/1;
-    background: url('../assets/menuicons/close.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: brightness(0) invert(1);
-    width: 0.7em; 
-    height: 0.7em;
+  aspect-ratio: 1/1;
+  background: url("../assets/menuicons/close.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0) invert(1);
+  width: 0.7em;
+  height: 0.7em;
 }
 
 .settings-row {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    height: 3rem;
-    flex-direction: row;
-    align-content: space-between;
-    margin: 0 auto;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 3rem;
+  flex-direction: row;
+  align-content: space-between;
+  margin: 0 auto;
 }
 
 /* Container for the toggle */
 .toggle-switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 24px;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
 }
 
 /* Hide default checkbox */
 .toggle-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 /* The track */
 .slider {
-    position: absolute;
-    cursor: pointer;
-    background-color: #858585;
-    border-radius: 24px;
-    width: 100%;
-    height: 100%;
-    transition: background-color 0.3s;
-    outline: 0.15rem solid black;
+  position: absolute;
+  cursor: pointer;
+  background-color: #858585;
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s;
+  outline: 0.15rem solid black;
 }
 
 /* The circular slider */
 .slider::before {
-    content: "";
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    left: 4px;
-    bottom: 2px;
-    background-color: white;
-    border-radius: 50%;
-    transition: transform 0.3s;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
 }
 
 /* Toggled state */
-.toggle-switch input:checked+.slider {
-    background-color: #414bb9;
+.toggle-switch input:checked + .slider {
+  background-color: #414bb9;
 }
 
-.toggle-switch input:checked+.slider::before {
-    transform: translateX(26px);
+.toggle-switch input:checked + .slider::before {
+  transform: translateX(26px);
 }
 
 .stats-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    margin-bottom: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 3em;
 }
 
 .stats-box {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 10em;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 10em;
+  align-items: center;
+  text-align: center;
 }
 
 .stats-box h3 {
-    width: 100%;
-    margin: 0;
+  width: 100%;
+  margin: 0;
 }
 
 .stats-box h2 {
-    margin: 0;
-    font-size: 2.5em;
+  margin: 0;
+  font-size: 2.5em;
 }
-

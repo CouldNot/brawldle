@@ -24,7 +24,7 @@
   text-align: center;
   width: 80%;
   height: 100%;
-  background-color: #895e33 ;
+  background-color: #895e33;
   outline: 0.2rem solid rgb(60, 60, 60);
   border-radius: 0.25em;
   color: white;
@@ -264,9 +264,9 @@ footer {
 }
 
 .bottom-info {
-  color: white;
+  /* color: white;
   -webkit-text-stroke: 0.02rem black;
-  text-shadow: 0 0.09em 0 black;
+  text-shadow: 0 0.09em 0 black; */
   margin: 0;
 }
 
@@ -319,7 +319,6 @@ footer {
   flex-shrink: 0;
 }
 
-
 #streak {
   font-family: "Lilita One", "sans-serif";
   aspect-ratio: 1/1;
@@ -346,7 +345,6 @@ footer {
   border-radius: 6px;
 }
 
-
 #win-info {
   opacity: 0;
   margin: 0 auto;
@@ -365,7 +363,6 @@ footer {
   justify-content: center;
   text-align: center;
   font-family: "Lilita One", "sans-serif";
-  -webkit-text-stroke: 0.01rem black;
 }
 
 .victory {
@@ -375,13 +372,13 @@ footer {
   margin-top: 0.8em;
   margin-bottom: 0.8em;
   transform: rotate(-2deg);
-  -webkit-text-stroke: 0.01rem black;
+  /* -webkit-text-stroke: 0.01rem black; */
 }
 
 .win-num-of-tries-text {
   color: white;
   font-size: 1.1em;
-  -webkit-text-stroke: 0.02rem black;
+  /* -webkit-text-stroke: 0.02rem black; */
   margin-bottom: 0;
 }
 
@@ -416,7 +413,6 @@ footer {
   height: 100%;
   text-align: start;
   justify-content: center;
-  -webkit-text-stroke: 0.01rem black;
 }
 
 #win-brawler-name-container h2 {
@@ -438,14 +434,14 @@ footer {
   font-size: 1.2em;
   margin: 0;
   color: white;
-  -webkit-text-stroke: 0.02rem black;
+  /* -webkit-text-stroke: 0.02rem black; */
 }
 
 #win-time-until-next {
   color: white;
   font-size: 2em;
   margin-top: 0.5em;
-  -webkit-text-stroke: 0.03rem black;
+  /* -webkit-text-stroke: 0.03rem black; */
 }
 
 #win-action-buttons {

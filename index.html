@@ -84,7 +84,7 @@
                 </div>
             </div>
             <div id="win-info" class="hidden">
-              <h2 class="victory text-outline" data-i18n="VICTORY"></h2>
+              <h2 class="victory stroke" data-i18n="VICTORY"></h2>
               <div id="win-header" class="stroke">
                 <div id="win-portrait"></div>
                 <div id="win-brawler-name-container">
@@ -93,8 +93,8 @@
                 </div>
               </div>
               <div class="win-stats-box">
-                <h2 class="win-num-of-tries-text text-outline"><span data-i18n="NUMBER_OF_TRIES"></span><span id="win-num-of-tries"></span></h2> 
-                <h2 class="win-num-of-tries-text text-outline"><span data-i18n="AVG_NUMBER_OF_TRIES"></span><span id="avg-num-of-tries"></span></h2> 
+                <h2 class="win-num-of-tries-text stroke"><span data-i18n="NUMBER_OF_TRIES"></span><span id="win-num-of-tries"></span></h2> 
+                <h2 class="win-num-of-tries-text stroke"><span data-i18n="AVG_NUMBER_OF_TRIES"></span><span id="avg-num-of-tries"></span></h2> 
               </div>
               <div id="win-action-buttons">
                 <div id="win-stats-button" class="win-action-button" onclick="document.getElementById('statslightbox').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('statslightbox').classList.add('fadeIn')">
@@ -106,12 +106,12 @@
                   <p id="win-share-button-text" data-i18n="SHARE"></p>
                 </div>  
               </div>
-              <h2 class="win-next-brawler-in text-outline" data-i18n="NEXT_BRAWLER_IN"></h2>
-              <h2 id="win-time-until-next" class="text-outline"></h2>
+              <h2 class="win-next-brawler-in stroke" data-i18n="NEXT_BRAWLER_IN"></h2>
+              <h2 id="win-time-until-next" class="stroke"></h2>
             </div>
             </div>
         </div>
-        <div id="yesterday-info">
+        <div id="yesterday-info" class="stroke">
           <h2 class="bottom-info" data-i18n="YESTERDAY_WAS"><span id="yesterday-number"></span></h2> 
           <div id="yesterday-brawler">
             <img id="yesterday-icon" alt="Brawler pin">
@@ -266,7 +266,7 @@
     <div id="fade" class="black_overlay"></div>
     <footer>
       <div id="bottom-buttons">
-        <button id="github" onclick="window.open('https://github.com/CouldNot', '_blank')" type="button"></button>
+        <button id="github" onclick="window.open('https://github.com/CouldNot/brawldle', '_blank')" type="button"></button>
         <button id="info-button" onclick="document.getElementById('infolightbox').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('infolightbox').classList.add('fadeIn')"></button>
       </div>
       <div>brawldle.io — <span id="website-notice-date"></span></div>
