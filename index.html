@@ -42,16 +42,6 @@
               <button id="language" onclick="document.getElementById('languagelightbox').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('languagelightbox').classList.add('fadeIn')"></button>
             </div>
 
-
-
-
-            <!-- <div id="TEMPORARY" hidden class="stroke">
-              <h2 class="infotext">EN: Added Portuguese (Brazil)! Switch back anytime. Any issues? Email brawldle1@gmail.com.</h2>
-              <h2 class="infotext">PT-BR: Adicionado Português (Brasil)! Volte para o inglês se quiser. Algum problema? brawldle1@gmail.com.</h2>
-              <h2 class="infotext">Want your language added? Email me!</h2>
-              <button id="temp-close">X</button>
-            </div> -->
-
             <div id="info" class="stroke">
                 <h2 class="infotext" data-i18n="INFOTEXT_1"></h2>
                 <h2 class="infotext" data-i18n="INFOTEXT_2"></h2>
@@ -59,9 +49,9 @@
             <form id="guess" autocomplete="off">
                 <input id="field" data-i18n-placeholder="SEARCHBAR" type="text"><button type="submit" class="submit stroke" data-i18n="ENTER"></button>
             </form>
-            <div style="margin: 0 auto; padding: 0.5em;">
+            <!-- <div style="margin: 0 auto; padding: 0.5em;">
               <span id="wins-already-container" class="stroke"><span id="wins-already" class="stroke">0</span><span id="wins-already-text" data-i18n="ALREADY_FOUND_OUT"></span></span>
-            </div>
+            </div> -->
             <div id="list">
               <div id="label-row" class="row">
                 <div class="label stroke">
@@ -285,26 +275,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
     <script type="module" src="scripts/main.js"></script>
     <script type="module" src="scripts/langChange.js"></script>
-
-
-
-
-
-    <!-- <script>
-    (function(){
-      const KEY = "langBannerClosed:v1";
-      const banner = document.getElementById("TEMPORARY");
-      const closeBtn = document.getElementById("temp-close");
-
-      if (localStorage.getItem(KEY)) return; // don't show if closed before
-
-      banner.hidden = false;
-
-      closeBtn.onclick = () => {
-        localStorage.setItem(KEY, "1");
-        banner.remove();
-      };
-    })();
-    </script> -->
   </body>
 </html>

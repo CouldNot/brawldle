@@ -97,19 +97,21 @@ const website_notice_date = document.getElementById("website-notice-date");
 website_notice_date.innerHTML = new Date().getFullYear().toString();
 
 function updateWinsAlreadyCounter(newWins) {
-  let counter = document.getElementById("wins-already");
-  let winsCount = Number(counter.innerHTML);
-  if (newWins !== winsCount) {
-    if (winsCount == 0) {
-      var countUp = new CountUp("wins-already", newWins);
-      countUp.start();
-    } else {
-      var countUp = new CountUp("wins-already", newWins, {
-        startVal: winsCount,
-      });
-      countUp.start();
-    }
-  }
+  // let counter = document.getElementById("wins-already");
+  // let winsCount = Number(counter.innerHTML);
+  // if (newWins !== winsCount) {
+  //   if (winsCount == 0) {
+  //     var countUp = new CountUp("wins-already", newWins);
+  //     countUp.start();
+  //   } else {
+  //     var countUp = new CountUp("wins-already", newWins, {
+  //       startVal: winsCount,
+  //     });
+  //     countUp.start();
+  //   }
+  // }
+  console.log(newWins);
+
 }
 
 export function updateYesterdayBrawler() {
@@ -385,9 +387,9 @@ export async function getAvgTries() {
 
 export function startUpdatingWins() {
   getWins();
-  setInterval(async () => {
-    getWins();
-  }, 5000); // 5000ms (5 seconds)
+  // setInterval(async () => {
+  //   getWins();
+  // }, 5000); // 5000ms (5 seconds)
 }
 
 let shareResetTimer; // avoid stacking timers on rapid clicks

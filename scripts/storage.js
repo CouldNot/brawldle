@@ -44,9 +44,7 @@ export function getLanguage() {
 
         setLanguage(language);
     }
-
-    console.log(navigator.language)
-    console.log(language)
+    
     return language;
 }
 
