@@ -185,7 +185,7 @@ export function updateSettings() {
 
   getClickToValidate();
   getLanguage();
-  
+
   click_toggle.checked = getClickToValidate();
   click_toggle.dispatchEvent(new Event("change"));
 

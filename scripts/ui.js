@@ -65,13 +65,13 @@ export function t(key) {
 
 // apply i18n to a subtree (default whole document)
 function applyI18n(root = document) {
-  root.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
+  root.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
     el.textContent = t(key);
   });
-  root.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-    const key = el.getAttribute('data-i18n-placeholder');
-    el.setAttribute('placeholder', t(key));
+  root.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    el.setAttribute("placeholder", t(key));
   });
 }
 
@@ -80,13 +80,12 @@ export async function loadLanguage(langCode) {
     const res = await fetch(`languages/${langCode}.json`);
     TRANSLATIONS = await res.json();
     LANG_READY = true;
-    document.documentElement.setAttribute('lang', langCode);
+    document.documentElement.setAttribute("lang", langCode);
     applyI18n(document); // translate everything currently in the DOM
   } catch (e) {
-    console.error('Error loading language:', e);
+    console.error("Error loading language:", e);
   }
 }
-
 
 if (alreadyWon) {
   // don't let user guess again if they have already won
@@ -111,7 +110,6 @@ function updateWinsAlreadyCounter(newWins) {
   //   }
   // }
   console.log(newWins);
-
 }
 
 export function updateYesterdayBrawler() {
@@ -399,11 +397,11 @@ function onShareButtonClicked() {
   navigator.clipboard?.writeText(text).catch(() => {});
 
   const label = document.getElementById("win-share-button-text");
-  const icon  = document.getElementById("win-share-button-icon");
+  const icon = document.getElementById("win-share-button-icon");
 
   // Cache the current (localized) label
-  const originalText = label.textContent;   // e.g., "Share" / "Compartilhar"
-  const i18nKey = label.getAttribute('data-i18n'); // keep this intact
+  const originalText = label.textContent; // e.g., "Share" / "Compartilhar"
+  const i18nKey = label.getAttribute("data-i18n"); // keep this intact
 
   // Show checkmark
   icon.style.display = "none";
@@ -416,7 +414,6 @@ function onShareButtonClicked() {
     label.textContent = i18nKey ? t(i18nKey) : originalText;
   }, 1500);
 }
-
 
 function guessesToEmojis(guesses, answer) {
   let emojis = "";

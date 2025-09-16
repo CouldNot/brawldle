@@ -1,279 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DTYKY6GRQ5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-DTYKY6GRQ5');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Brawldle - Brawl Stars Wordle Game</title>
-    <meta name="description" content="Can you solve the free Brawl Stars Wordle game? Guess the daily Brawl Stars Brawler, play new puzzles everyday, and share your results with friends.">
-    <link rel="stylesheet" href="styles/components.css">
-    <link rel="stylesheet" href="styles/animations.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/utilities.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="manifest" href="assets/site.webmanifest">
-  </head>
-  <body>
-    <main>
-        <div id="content">
-            <img id="logo" src="assets/BrawldleLogo.svg" alt="Brawldle Logo">
-            <div id="menu">
-              <button id="question" onclick="document.getElementById('questionlightbox').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('questionlightbox').classList.add('fadeIn')"></button>
-              <button id="stats" onclick="document.getElementById('statslightbox').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('statslightbox').classList.add('fadeIn')"></button>
-              <div id="streak">
-                <span id="streak-number"></span>
-              </div>
-              <button id="settings" onclick="document.getElementById('settingslightbox').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('settingslightbox').classList.add('fadeIn')"></button>
-              <button id="language" onclick="document.getElementById('languagelightbox').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('languagelightbox').classList.add('fadeIn')"></button>
-            </div>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DTYKY6GRQ5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-            <div id="info" class="stroke">
-                <h2 class="infotext" data-i18n="INFOTEXT_1"></h2>
-                <h2 class="infotext" data-i18n="INFOTEXT_2"></h2>
-            </div>
-            <form id="guess" autocomplete="off">
-                <input id="field" data-i18n-placeholder="SEARCHBAR" type="text"><button type="submit" class="submit stroke" data-i18n="ENTER"></button>
-            </form>
-            <!-- <div style="margin: 0 auto; padding: 0.5em;">
+    gtag('config', 'G-DTYKY6GRQ5');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Brawldle - Brawl Stars Wordle Game</title>
+  <meta name="description"
+    content="Can you solve the free Brawl Stars Wordle game? Guess the daily Brawl Stars Brawler, play new puzzles everyday, and share your results with friends.">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/utilities.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+</head>
+
+<body>
+  <main>
+    <div id="content">
+      <img id="logo" src="assets/BrawldleLogo.svg" alt="Brawldle Logo">
+      <div id="menu">
+        <button id="question"
+          onclick="document.getElementById('questionlightbox').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('questionlightbox').classList.add('fadeIn')"></button>
+        <button id="stats"
+          onclick="document.getElementById('statslightbox').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('statslightbox').classList.add('fadeIn')"></button>
+        <div id="streak">
+          <span id="streak-number"></span>
+        </div>
+        <button id="settings"
+          onclick="document.getElementById('settingslightbox').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('settingslightbox').classList.add('fadeIn')"></button>
+        <button id="language"
+          onclick="document.getElementById('languagelightbox').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('languagelightbox').classList.add('fadeIn')"></button>
+      </div>
+
+      <div id="info" class="stroke">
+        <h2 class="infotext" data-i18n="INFOTEXT_1"></h2>
+        <h2 class="infotext" data-i18n="INFOTEXT_2"></h2>
+      </div>
+      <form id="guess" autocomplete="off">
+        <input id="field" data-i18n-placeholder="SEARCHBAR" type="text"><button type="submit" class="submit stroke"
+          data-i18n="ENTER"></button>
+      </form>
+      <!-- <div style="margin: 0 auto; padding: 0.5em;">
               <span id="wins-already-container" class="stroke"><span id="wins-already" class="stroke">0</span><span id="wins-already-text" data-i18n="ALREADY_FOUND_OUT"></span></span>
             </div> -->
-            <div id="list">
-              <div id="label-row" class="row">
-                <div class="label stroke">
-                  <span data-i18n="BRAWLER_COLUMN"></span>
-                  <div class="seperator"></div>
-                </div>
-                <div class="label stroke">
-                  <span data-i18n="RARITY_COLUMN"></span>
-                  <div class="seperator"></div>
-                </div>
-                <div class="label stroke">
-                  <span data-i18n="CLASS_COLUMN"></span>
-                  <div class="seperator"></div>
-                </div>
-                <div class="label stroke">
-                  <span data-i18n="MOVEMENT_COLUMN"></span>
-                  <div class="seperator"></div>
-                </div>
-                <div class="label stroke">
-                  <span data-i18n="RANGE_COLUMN"></span>
-                  <div class="seperator"></div>
-                </div>
-                <div class="label stroke">
-                  <span data-i18n="RELOAD_COLUMN"></span>
-                  <div class="seperator"></div>
-                </div>
-                <div class="label stroke">
-                  <span data-i18n="RELEASE_COLUMN"></span>
-                  <div class="seperator"></div>
-                </div>
-            </div>
-            <div id="win-info" class="hidden">
-              <h2 class="victory stroke" data-i18n="VICTORY"></h2>
-              <div id="win-header" class="stroke">
-                <div id="win-portrait"></div>
-                <div id="win-brawler-name-container">
-                  <h2 style="font-size: 1.1em; margin: 0e" data-i18n="YOU_GUESSED"></h2>
-                  <h2 id="win-brawler-name"></h2>
-                </div>
-              </div>
-              <div class="win-stats-box">
-                <h2 class="win-num-of-tries-text stroke"><span data-i18n="NUMBER_OF_TRIES"></span><span id="win-num-of-tries"></span></h2> 
-                <h2 class="win-num-of-tries-text stroke"><span data-i18n="AVG_NUMBER_OF_TRIES"></span><span id="avg-num-of-tries"></span></h2> 
-              </div>
-              <div id="win-action-buttons">
-                <div id="win-stats-button" class="win-action-button" onclick="document.getElementById('statslightbox').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('statslightbox').classList.add('fadeIn')">
-                  <div id="win-stats-button-icon"></div>
-                  <p data-i18n="STATS"></p>
-                </div>  
-                <div id="win-share-button" class="win-action-button">
-                  <div id="win-share-button-icon"></div>
-                  <p id="win-share-button-text" data-i18n="SHARE"></p>
-                </div>  
-              </div>
-              <h2 class="win-next-brawler-in stroke" data-i18n="NEXT_BRAWLER_IN"></h2>
-              <h2 id="win-time-until-next" class="stroke"></h2>
-            </div>
-            </div>
-        </div>
-        <div id="yesterday-info" class="stroke">
-          <h2 class="bottom-info" data-i18n="YESTERDAY_WAS"><span id="yesterday-number"></span></h2> 
-          <div id="yesterday-brawler">
-            <img id="yesterday-icon" alt="Brawler pin">
-            <h2 id="yesterday-name" class="bottom-info" style="color: #42db6b">Mandy</h2>
+      <div id="list">
+        <div id="label-row" class="row">
+          <div class="label stroke">
+            <span data-i18n="BRAWLER_COLUMN"></span>
+            <div class="seperator"></div>
+          </div>
+          <div class="label stroke">
+            <span data-i18n="RARITY_COLUMN"></span>
+            <div class="seperator"></div>
+          </div>
+          <div class="label stroke">
+            <span data-i18n="CLASS_COLUMN"></span>
+            <div class="seperator"></div>
+          </div>
+          <div class="label stroke">
+            <span data-i18n="MOVEMENT_COLUMN"></span>
+            <div class="seperator"></div>
+          </div>
+          <div class="label stroke">
+            <span data-i18n="RANGE_COLUMN"></span>
+            <div class="seperator"></div>
+          </div>
+          <div class="label stroke">
+            <span data-i18n="RELOAD_COLUMN"></span>
+            <div class="seperator"></div>
+          </div>
+          <div class="label stroke">
+            <span data-i18n="RELEASE_COLUMN"></span>
+            <div class="seperator"></div>
           </div>
         </div>
-        </div>
-    </main>
-    <div id="infolightbox" class="white_content stroke">
-      <h1>About</h1>
-      <hr color="white">
-      <h3 data-i18n="GUESS_A_NEW"></h3>
-      <h3 data-i18n="THIS_PROJECT"></h3>
-      <h1 data-i18n="CREDITS"></h1>
-      <hr color="white">
-      <h3 data-i18n="INSPIRED_BY"></h3>
-      <h3 data-i18n="USING_ASSETS"></h3>
-      <h3 data-i18n="ICONS_MADE_BY"></h3>
-      <h3 style="margin-bottom: 2em;"><a href="https://www.flaticon.com/" target="_blank">Link to Flaticon</a></h3>
-      
-      <button href="javascript:void(0)" onclick="document.getElementById('infolightbox').style.display='none';document.getElementById('fade').style.display='none'">
-        <div class="close-icon"></div>
-        <span data-i18n="CLOSE"></span>
-      </button>
-    </div>
-    <div id="questionlightbox" class="white_content stroke">
-      <h1 data-i18n="HOW_TO_PLAY"></h1>
-      <hr color="white">
-      <h3 data-i18n="GUESS_TODAY"></h3>
-      <h3 data-i18n="TO_BEGIN"></h3>
-      <h3 data-i18n="THE_COLOR_OF"></h3>
-      <h3 data-i18n="GREEN_INDICATES_THAT"></h3>
-      <h3 data-i18n="RED_INDICATES_THAT"></h3>
-      <h3 data-i18n="UP_OR_DOWN_INDICATES_THAT"></h3>
-      <h1 data-i18n="CATEGORIES"></h1>
-      <hr color="white">
-
-      <h3>
-        <span data-i18n="RARITY_COLUMN" style="color:#1fea3a"></span>
-        <span data-i18n="RARITY_LIST"></span>
-      </h3>
-
-      <h3>
-        <span data-i18n="CLASS_COLUMN" style="color:#1fea3a"></span>
-        <span data-i18n="CLASS_LIST"></span>
-      </h3>
-
-      <h3>
-        <span data-i18n="MOVEMENT_COLUMN" style="color:#1fea3a"></span>
-        <span data-i18n="MOVEMENT_LIST"></span>
-      </h3>
-
-      <h3>
-        <span data-i18n="RANGE_COLUMN" style="color:#1fea3a"></span>
-        <span data-i18n="RANGE_LIST"></span>
-      </h3>
-
-      <h3>
-        <span data-i18n="RELOAD_COLUMN" style="color:#1fea3a"></span>
-        <span data-i18n="RELOAD_LIST"></span>
-      </h3>
-
-      <h3>
-        <span data-i18n="RELEASE_COLUMN" style="color:#1fea3a"></span>
-        <span data-i18n="RELEASE_LIST"></span>
-      </h3>
-
-
-      <button href="javascript:void(0)" onclick="document.getElementById('questionlightbox').style.display='none';document.getElementById('fade').style.display='none'">
-        <div class="close-icon"></div>
-        <span data-i18n="CLOSE"></span>
-      </button>
-    </div>
-    <div id="settingslightbox" class="white_content stroke" style="height: 15rem;">
-      <h1 data-i18n="SETTINGS"></h1>
-      <hr color="white">
-      <div class="settings-row">
-        <div>
-          <div>
-            <h2 data-i18n="HARD_MODE"></h2>
+        <div id="win-info" class="hidden">
+          <h2 class="victory stroke" data-i18n="VICTORY"></h2>
+          <div id="win-header" class="stroke">
+            <div id="win-portrait"></div>
+            <div id="win-brawler-name-container">
+              <h2 style="font-size: 1.1em; margin: 0e" data-i18n="YOU_GUESSED"></h2>
+              <h2 id="win-brawler-name"></h2>
+            </div>
           </div>
-        </div>
-        <div style="margin-left: auto;">
-          <label class="toggle-switch">
-            <input type="checkbox" id="hard-mode-toggle"/>
-            <span class="slider"></span>
-          </label>
+          <div class="win-stats-box">
+            <h2 class="win-num-of-tries-text stroke"><span data-i18n="NUMBER_OF_TRIES"></span><span
+                id="win-num-of-tries"></span></h2>
+            <h2 class="win-num-of-tries-text stroke"><span data-i18n="AVG_NUMBER_OF_TRIES"></span><span
+                id="avg-num-of-tries"></span></h2>
+          </div>
+          <div id="win-action-buttons">
+            <div id="win-stats-button" class="win-action-button"
+              onclick="document.getElementById('statslightbox').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('statslightbox').classList.add('fadeIn')">
+              <div id="win-stats-button-icon"></div>
+              <p data-i18n="STATS"></p>
+            </div>
+            <div id="win-share-button" class="win-action-button">
+              <div id="win-share-button-icon"></div>
+              <p id="win-share-button-text" data-i18n="SHARE"></p>
+            </div>
+          </div>
+          <h2 class="win-next-brawler-in stroke" data-i18n="NEXT_BRAWLER_IN"></h2>
+          <h2 id="win-time-until-next" class="stroke"></h2>
         </div>
       </div>
-      <div class="settings-row">
-        <div>
-          <div>
-            <h2 data-i18n="CLICK_TO_VALIDATE"></h2>
-          </div>
-        </div>
-        <div style="margin-left: auto;">
-          <label class="toggle-switch">
-            <input type="checkbox" id="click-toggle"/>
-            <span class="slider"></span>
-          </label>
-        </div>
-      </div>
-      <button href="javascript:void(0)" onclick="document.getElementById('settingslightbox').style.display='none';document.getElementById('fade').style.display='none'">
-        <div class="close-icon"></div>
-        <span data-i18n="CLOSE"></span>
-      </button>
     </div>
-    <div id="languagelightbox" class="white_content stroke" style="height: 20rem;">
-      <h1 data-i18n="LANGUAGE"></h1>
-      <hr color="white">
+    <div id="yesterday-info" class="stroke">
+      <h2 class="bottom-info" data-i18n="YESTERDAY_WAS"><span id="yesterday-number"></span></h2>
+      <div id="yesterday-brawler">
+        <img id="yesterday-icon" alt="Brawler pin">
+        <h2 id="yesterday-name" class="bottom-info" style="color: #42db6b">Mandy</h2>
+      </div>
+    </div>
+    </div>
+  </main>
+  <div id="infolightbox" class="white_content stroke">
+    <h1>About</h1>
+    <hr color="white">
+    <h3 data-i18n="GUESS_A_NEW"></h3>
+    <h3 data-i18n="THIS_PROJECT"></h3>
+    <h1 data-i18n="CREDITS"></h1>
+    <hr color="white">
+    <h3 data-i18n="INSPIRED_BY"></h3>
+    <h3 data-i18n="USING_ASSETS"></h3>
+    <h3 data-i18n="ICONS_MADE_BY"></h3>
+    <h3 style="margin-bottom: 2em;"><a href="https://www.flaticon.com/" target="_blank">Link to Flaticon</a></h3>
+
+    <button href="javascript:void(0)"
+      onclick="document.getElementById('infolightbox').style.display='none';document.getElementById('fade').style.display='none'">
+      <div class="close-icon"></div>
+      <span data-i18n="CLOSE"></span>
+    </button>
+  </div>
+  <div id="questionlightbox" class="white_content stroke">
+    <h1 data-i18n="HOW_TO_PLAY"></h1>
+    <hr color="white">
+    <h3 data-i18n="GUESS_TODAY"></h3>
+    <h3 data-i18n="TO_BEGIN"></h3>
+    <h3 data-i18n="THE_COLOR_OF"></h3>
+    <h3 data-i18n="GREEN_INDICATES_THAT"></h3>
+    <h3 data-i18n="RED_INDICATES_THAT"></h3>
+    <h3 data-i18n="UP_OR_DOWN_INDICATES_THAT"></h3>
+    <h1 data-i18n="CATEGORIES"></h1>
+    <hr color="white">
+
+    <h3>
+      <span data-i18n="RARITY_COLUMN" style="color:#1fea3a"></span>
+      <span data-i18n="RARITY_LIST"></span>
+    </h3>
+
+    <h3>
+      <span data-i18n="CLASS_COLUMN" style="color:#1fea3a"></span>
+      <span data-i18n="CLASS_LIST"></span>
+    </h3>
+
+    <h3>
+      <span data-i18n="MOVEMENT_COLUMN" style="color:#1fea3a"></span>
+      <span data-i18n="MOVEMENT_LIST"></span>
+    </h3>
+
+    <h3>
+      <span data-i18n="RANGE_COLUMN" style="color:#1fea3a"></span>
+      <span data-i18n="RANGE_LIST"></span>
+    </h3>
+
+    <h3>
+      <span data-i18n="RELOAD_COLUMN" style="color:#1fea3a"></span>
+      <span data-i18n="RELOAD_LIST"></span>
+    </h3>
+
+    <h3>
+      <span data-i18n="RELEASE_COLUMN" style="color:#1fea3a"></span>
+      <span data-i18n="RELEASE_LIST"></span>
+    </h3>
+
+
+    <button href="javascript:void(0)"
+      onclick="document.getElementById('questionlightbox').style.display='none';document.getElementById('fade').style.display='none'">
+      <div class="close-icon"></div>
+      <span data-i18n="CLOSE"></span>
+    </button>
+  </div>
+  <div id="settingslightbox" class="white_content stroke" style="height: 15rem;">
+    <h1 data-i18n="SETTINGS"></h1>
+    <hr color="white">
+    <div class="settings-row">
       <div>
-          <h2 data-i18n="SELECT_THE_LANGUAGE"></h2>
-          <select id="languageSelect" onchange="changeLanguage(this.value)">
-            <option value="en">English</option>
-            <option value="pt">Português (BR)</option>
-            <!-- <option value="es">Español</option>
+        <div>
+          <h2 data-i18n="HARD_MODE"></h2>
+        </div>
+      </div>
+      <div style="margin-left: auto;">
+        <label class="toggle-switch">
+          <input type="checkbox" id="hard-mode-toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="settings-row">
+      <div>
+        <div>
+          <h2 data-i18n="CLICK_TO_VALIDATE"></h2>
+        </div>
+      </div>
+      <div style="margin-left: auto;">
+        <label class="toggle-switch">
+          <input type="checkbox" id="click-toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <button href="javascript:void(0)"
+      onclick="document.getElementById('settingslightbox').style.display='none';document.getElementById('fade').style.display='none'">
+      <div class="close-icon"></div>
+      <span data-i18n="CLOSE"></span>
+    </button>
+  </div>
+  <div id="languagelightbox" class="white_content stroke" style="height: 20rem;">
+    <h1 data-i18n="LANGUAGE"></h1>
+    <hr color="white">
+    <div>
+      <h2 data-i18n="SELECT_THE_LANGUAGE"></h2>
+      <select id="languageSelect" onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="pt">Português (BR)</option>
+        <!-- <option value="es">Español</option>
             <option value="pl">Polski</option> -->
-          </select>
-      </div>
-      <h3 data-i18n="IF_YOU_HAVE_ANY"></h3>
-      <button href="javascript:void(0)" onclick="document.getElementById('languagelightbox').style.display='none';document.getElementById('fade').style.display='none'">
-        <div class="close-icon"></div>
-        <span data-i18n="CLOSE"></span>
-      </button>
+      </select>
     </div>
-    <div id="statslightbox" class="white_content stroke" style="height: 15rem;">
-      <h1 data-i18n="STATS"></h1>
-      <hr color="white"></hr>
-      <div class="stats-row">
-        <div class="stats-box">
-          <h3 data-i18n="GAMES_WON"></h3>
-          <h2 id="games-won">5</h2>
-        </div>
-        <div class="stats-box">
-          <h3 data-i18n="AVG_GUESSES"></h3>
-          <h2 id="average-guesses">5</h2>
-        </div>
-        <div class="stats-box">
-          <h3 data-i18n="CURRENT_STREAK"></h3>
-          <h2 id="current-streak">5</h2>
-        </div>
-        <div class="stats-box">
-          <h3 data-i18n="MAX_STREAK"></h3>
-          <h2 id="max-streak">5</h2>
-        </div>
+    <h3 data-i18n="IF_YOU_HAVE_ANY"></h3>
+    <button href="javascript:void(0)"
+      onclick="document.getElementById('languagelightbox').style.display='none';document.getElementById('fade').style.display='none'">
+      <div class="close-icon"></div>
+      <span data-i18n="CLOSE"></span>
+    </button>
+  </div>
+  <div id="statslightbox" class="white_content stroke" style="height: 15rem;">
+    <h1 data-i18n="STATS"></h1>
+    <hr color="white">
+    </hr>
+    <div class="stats-row">
+      <div class="stats-box">
+        <h3 data-i18n="GAMES_WON"></h3>
+        <h2 id="games-won">5</h2>
       </div>
-      <button href="javascript:void(0)" onclick="document.getElementById('statslightbox').style.display='none';document.getElementById('fade').style.display='none'">
-        <div class="close-icon"></div>
-        <span data-i18n="CLOSE"></span>
-      </button>
+      <div class="stats-box">
+        <h3 data-i18n="AVG_GUESSES"></h3>
+        <h2 id="average-guesses">5</h2>
+      </div>
+      <div class="stats-box">
+        <h3 data-i18n="CURRENT_STREAK"></h3>
+        <h2 id="current-streak">5</h2>
+      </div>
+      <div class="stats-box">
+        <h3 data-i18n="MAX_STREAK"></h3>
+        <h2 id="max-streak">5</h2>
+      </div>
     </div>
-    <div id="fade" class="black_overlay"></div>
-    <footer>
-      <div id="bottom-buttons">
-        <button id="github" onclick="window.open('https://github.com/CouldNot/brawldle', '_blank')" type="button"></button>
-        <button id="info-button" onclick="document.getElementById('infolightbox').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('infolightbox').classList.add('fadeIn')"></button>
-      </div>
-      <div>brawldle.io — <span id="website-notice-date"></span></div>
-      <div style="font-size: 0.7em" data-i18n="NOT_AFFLIATED_WITH"></div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
-    <script type="module" src="scripts/main.js"></script>
-    <script type="module" src="scripts/langChange.js"></script>
-  </body>
+    <button href="javascript:void(0)"
+      onclick="document.getElementById('statslightbox').style.display='none';document.getElementById('fade').style.display='none'">
+      <div class="close-icon"></div>
+      <span data-i18n="CLOSE"></span>
+    </button>
+  </div>
+  <div id="fade" class="black_overlay"></div>
+  <footer>
+    <div id="bottom-buttons">
+      <button id="github" onclick="window.open('https://github.com/CouldNot/brawldle', '_blank')"
+        type="button"></button>
+      <button id="info-button"
+        onclick="document.getElementById('infolightbox').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('infolightbox').classList.add('fadeIn')"></button>
+    </div>
+    <div>brawldle.io — <span id="website-notice-date"></span></div>
+    <div style="font-size: 0.7em" data-i18n="NOT_AFFLIATED_WITH"></div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/langChange.js"></script>
+</body>
+
 </html>
