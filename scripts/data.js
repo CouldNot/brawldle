@@ -751,6 +751,22 @@ export const data = {
     reload: "Normal",
     released: "2025",
   },
+  mina: {
+    rarity: "Mythic",
+    class: "Damage Dealer",
+    movement: "Fast",
+    range: "Long",
+    reload: "Fast",
+    released: "2025",
+  },
+  ziggy: {
+    rarity: "Mythic",
+    class: "Controller",
+    movement: "Fast",
+    range: "Long",
+    reload: "Normal",
+    released: "2025",
+  },
 };
 
 export const brawlers = Object.keys(data);
