@@ -8,6 +8,7 @@ window.changeLanguage = function (lang) {
 const flagMap = {
   en: "assets/flags/en.png",
   pt: "assets/flags/pt.png",
+  ru: "assets/flags/ru.png",
 };
 
 function updateFlag(lang) {
@@ -23,4 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("languageSelect");
   if (select) select.value = savedLang;
   updateFlag(savedLang);
+
+  document.documentElement.classList.toggle("lang-ru", savedLang === "ru");
 });

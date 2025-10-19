@@ -35,7 +35,7 @@ export function getLanguage() {
       .toLowerCase();
 
     // supported languages list
-    const supported = ["en", "pt"];
+    const supported = ["en", "pt", "ru"];
     if (!supported.includes(browserLang)) {
       language = "en";
     } else {

@@ -675,7 +675,7 @@ export const data = {
     rarity: "Epic",
     class: "Assassin",
     movement: "Very Fast",
-    range: "Very Short",
+    range: "Short",
     reload: "Very Fast",
     released: "2024",
   },
