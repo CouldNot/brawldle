@@ -9,6 +9,7 @@ const flagMap = {
   en: "assets/flags/en.png",
   pt: "assets/flags/pt.png",
   ru: "assets/flags/ru.png",
+  fr: "assets/flags/fr.png",
 };
 
 function updateFlag(lang) {
