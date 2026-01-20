@@ -11,6 +11,7 @@ const flagMap = {
   ru: "assets/flags/ru.png",
   fr: "assets/flags/fr.png",
   es: "assets/flags/es.png",
+  uk: "assets/flags/uk.png",
 };
 
 function updateFlag(lang) {
@@ -27,5 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (select) select.value = savedLang;
   updateFlag(savedLang);
 
-  document.documentElement.classList.toggle("lang-ru", savedLang === "ru");
+  document.documentElement.classList.toggle(
+    "lang-ru",
+    savedLang === "ru" || savedLang === "uk",
+  );
 });
