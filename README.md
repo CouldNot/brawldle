@@ -1,5 +1,9 @@
 ![logo](https://github.com/CouldNOt/brawldle/blob/main/assets/BrawldleLogo.svg)
 
+**This project was sunset in 2026 and merged into brawldle.gg. Much thanks to everyone who has played!**
+
+---
+
 A daily guessing game based on the mobile game Brawl Stars by Supercell
 
 # Features
