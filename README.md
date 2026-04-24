@@ -6,6 +6,12 @@
 
 A daily guessing game based on the mobile game Brawl Stars by Supercell
 
+### Usage
+- 👥 Reached 180,000+ total users (as of March 2026)
+- 🚀 560,000+ total sessions
+- 🌍 Played in over 140+ countries
+- 🗣️ Available in 6 languages
+
 # Features
 - View and generate player stats (local storage)
 - Daily brawler for everybody through a random seed
